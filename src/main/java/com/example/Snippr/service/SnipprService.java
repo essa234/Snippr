@@ -1,7 +1,7 @@
 package com.example.Snippr.service;
 
 import com.example.Snippr.model.Snippet;
-import com.example.Snippr.repository.Repository;
+import com.example.Snippr.repository.SnippetRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 public class SnipprService {
 
   @Autowired
-  private Repository repository;
+  private SnippetRepository repository;
 
   public Snippet getSnippet(Long id){
     return repository.getById(id);
